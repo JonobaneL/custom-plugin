@@ -1,0 +1,69 @@
+#title{
+    margin: 20px;
+}
+.carousel{
+    width: 920px;
+    display: grid;
+    grid-template-columns: 50px 800px 50px; 
+    grid-template-rows: 450px 50px; 
+    gap: 0 10px; 
+    grid-template-areas: 
+        "prevBtn slides nextBtn"
+        ".  dots ."; 
+}
+.slides{
+    position: relative;
+    display: block;
+    grid-area: slides;
+}
+.slides .slide{
+    position:absolute;
+    opacity: 0;
+}
+.slide img{
+    object-fit: cover;
+    width: 800px;
+    height: 450px;
+    border-radius: 5px;
+}
+.slide.active{
+    opacity: 1;
+    animation: fadeIn; 
+    animation-duration: 1s; 
+}
+.prevBtn{
+    grid-area: prevBtn;
+}
+.nextBtn{
+    grid-area: nextBtn;
+}
+.nextBtn, .prevBtn{
+    width: 50px;
+    align-self: center;
+    cursor:pointer;
+}
+.nextBtn img, .prevBtn img{
+    width: 100%;
+}
+.prevBtn img{
+    transform: rotate(180deg);
+}
+.dots {
+    grid-area: dots;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.dot{
+    width: 12px;
+    height: 12px;
+    border-radius: 10px;
+    margin-right: 3px;
+    border:2px solid #2f2f2f;
+    cursor: pointer;
+}
+.dot.active{
+    background: #2f2f2f;
+    animation: zoomIn; 
+    animation-duration: 0.5s; 
+}

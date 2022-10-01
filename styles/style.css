@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.tabs{
+    margin: 50px 0;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:space-around;
+}
+
+.tab{
+    width: 280px;
+    height: 300px;
+    box-shadow: 0px 0px 8px 0px #2f2f2f;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+.tab .title{
+    margin: 0 0 10px 0;
+}
+.tab .content{
+    margin: 10px 5px 0;
+}
+.tab button{
+    width: 80px;
+    height:30px;
+    font-size: 15px;
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+

@@ -1,0 +1,80 @@
+.modal{}
+.modal.open .overlay,
+.modal.open .modal-window{
+    opacity: 1;
+    z-index: 99;
+}
+.modal.open .overlay{
+    animation: fadeIn; 
+    animation-duration: 0.5s;
+}
+.modal.open .modal-window{
+    animation: fadeInDown; 
+    animation-duration: 0.5s;
+}
+.modal.hidden .overlay,
+.modal.hidden .modal-window{
+    opacity: 1;
+    z-index: 99;
+}
+.modal.hidden .overlay{
+    animation: fadeOut; 
+    animation-duration: 0.5s;
+}
+.modal.hidden .modal-window{
+    animation: fadeOutUp; 
+    animation-duration: 0.5s;
+}
+.overlay, .modal-window{
+    opacity: 0;
+    z-index:-2;
+}
+.overlay{
+    position: fixed;
+    background:rgba(0, 0, 0, 0.5);
+    bottom:0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.overlay .modal-window{
+    width: 400px;
+    background: #fff;
+    border-radius:5px;
+    margin: 50px auto;
+    padding: 15px;
+}
+.modal-window .modal-header{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.modal-header .modal-close{
+    cursor: pointer;
+    font-size: 25px;
+}
+.modal-window .modal-content{
+    margin: 10px 0 0 0;
+}
+.modal-window .footer-buttons{
+    padding-top: 10px;
+}
+.modal-window .footer-buttons .btn{
+    width:80px;
+    height:40px;
+    font-size:17px;
+    border: none;
+    outline: none;
+    margin-left: 10px;
+    border-radius: 2px;
+}
+.btn.btn-confirm{
+    background-color: #2f2f2f;
+    color: #fff;
+}
+
+.footer-buttons{
+    display: flex;
+    justify-content: right;
+}
