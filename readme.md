@@ -10,6 +10,3 @@
         -element(ElementName) - Element after which slider will be inseted;
         -arrow(true | false) - Add or remove arrows;
         -dots(true | false) - Add or remove dots;
-
-
-##thank you
