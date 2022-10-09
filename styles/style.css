@@ -4,15 +4,15 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-.tabs{
-    margin: 50px 0;
+/* .tabs{
+    margin: 40px 0;
 }
 ul{
     list-style-type: none;
     display: flex;
     justify-content:space-around;
-}
-
+} */
+/* 
 .tab{
     width: 280px;
     height: 300px;
@@ -35,5 +35,61 @@ ul{
     position: absolute;
     right: 10px;
     bottom: 10px;
+} */
+
+h1{
+    margin: 20px;
 }
 
+.sneakers{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.sneakers .item{
+    width: 300px;
+    box-shadow: 0 0 5px 0 rgba(47, 47, 47, 0.4);
+    color: #2f2f2f;
+    border-radius: 3px;
+}
+.item .item__image{
+    width: 100%;
+    height: 350px;
+}
+.item .info{
+    width: 100%;
+    padding: 10px;
+}
+.info .info__name{
+    font-family: Montserrat-SemiBold;
+}
+.info .info__price{
+    font-family: Montserrat-Medium;
+    margin: 10px 0;
+}
+.info .info__btn{
+    width: 110px;
+    height: 35px;
+    font-family: Montserrat-Medium;
+    background: none;
+    border: 1px solid #2f2f2f;
+    border-radius:3px;
+    cursor:pointer;
+    transition: background 0.3s;
+
+}
+.info__btn:hover{
+    background: #2f2f2f;
+    color: #fff;
+    transition: background 0.3s;
+}
+.info__delete{
+    width: 35px;
+    height: 35px;
+    font-family: Montserrat-Medium;
+    background: none;
+    border: 1px solid #2f2f2f;
+    border-radius:3px;
+    cursor:pointer;
+    float: right;
+}

@@ -17,7 +17,6 @@ function _createModalFooter(buttons = []){
     })
     return modalFooter;
 }
-// data-close="true"
 function _createModal(options){
     const defaltWidth = '400px'
     const modalWindow = document.createElement('div');
@@ -26,13 +25,11 @@ function _createModal(options){
         <div class="overlay" >
             <div class="modal-window" style="width:${options.width || defaltWidth}">
                 <div class="modal-header">
-                    <h2 data-title>Title</h2>
+                    <h2 data-title>${options.title}</h2>
                     ${options.closable ? `<span id="modal__close-bth" class="modal-close" data-close="true">&times;</span>`:''}
                 </div>
                 <hr>
-                <div class="modal-content">
-                    <p data-content>content</p>
-                </div>
+                <div class="modal-content">${options.content || `<span></span>`}</div>
                 <div class="modal-footer"></div>
             </div>
         </div>
@@ -68,10 +65,12 @@ $.modal = function (options){
                 closing = false;
             },500)
             overleyBlock.removeAttribute('data-close')
+            if(typeof options.onClose === 'function'){
+                options.onClose();
+            }
         },
-        setTabData(property){
-            $modal.querySelector('[data-title]').textContent = property.title;
-            $modal.querySelector('[data-content]').textContent = property.content;
+        setContent(property){
+            $modal.querySelector('.modal-content').innerHTML = property;
         },
         
     }
